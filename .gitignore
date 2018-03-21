@@ -1,0 +1,11 @@
+*[Dd]ebug*
+*[Rr]elease*
+*.user
+[Mm]akefile
+ui_*.h
+*.zip
+*.log
+*.7z
+*.stash
+*.qm
+
