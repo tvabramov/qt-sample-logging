@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
 	int retval = a.exec();
 
 	// Подчищаем за логгером
+	qInstallMessageHandler(0);	// Если не сделать, то можем отправить сообщение
+								// несуществующему объекту
 	logwriter->abort();
 	logthread->wait();
 	delete logthread;
