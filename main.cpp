@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
 	qInstallMessageHandler(0);	// Если не сделать, то можем отправить сообщение
 								// несуществующему объекту
 	logwriter->abort();
-	logthread->wait();
+	logthread->wait(5000);		// По некоторым причинам, можно ждать очень долго
+								// Лучше ограничивать время ожидания
 	delete logthread;
 	delete logwriter;
 
